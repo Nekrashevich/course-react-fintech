@@ -4,11 +4,11 @@ import App from './App';
 import Order from '../components/Order/Order';
 import TimelineList from '../components/TimelineList/TimelineList';
 
-const createEvent = (name, value) => ({ target: { name, value }});
+const createEvent = (name, value) => ({ target: { name, value } });
 
 describe('Интеграционный тест', () => {
   /*
-  * Проверяем интграцию модулей
+  * Проверяем интeграцию модулей
   * По сути, если вы выполните остальные тесты, то этот тест должен пройти
   * */
 
@@ -28,11 +28,11 @@ describe('Интеграционный тест', () => {
 
   describe('Проверяем обновление стейта App', () => {
     const component = mount(<App />);
-    const result = [{"price": 30000, "title": "PS4 pro", "type": "hobbie"}, {"price": "130000", "title": "Apple", "type": "Безумные траты"}];
+    const result = [{ "price": 30000, "title": "PS4 pro", "type": "hobbie" }, { "price": "130000", "title": "Apple", "type": "Безумные траты" }];
 
-    component.find('[name="title"]').simulate('change',createEvent('title', 'Apple'));
-    component.find('[name="price"]').simulate('change',createEvent('price', '130000'));
-    component.find('[name="type"]').simulate('change',createEvent('type', 'Безумные траты'));
+    component.find('[name="title"]').simulate('change', createEvent('title', 'Apple'));
+    component.find('[name="price"]').simulate('change', createEvent('price', '130000'));
+    component.find('[name="type"]').simulate('change', createEvent('type', 'Безумные траты'));
     component.find('form').simulate('submit');
 
 
