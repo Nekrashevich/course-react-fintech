@@ -22,16 +22,12 @@ export default class Order extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    if (this.FormState()) {
+    if (this.state.price && this.state.price && this.state.type) {
       this.props.handleSubmit(this.state);
 
       this.formClear();
     }
   };
-
-  FormState = () => {
-    return (this.state.price && this.state.price && this.state.type) ? true : false;
-  }
 
   handleInputChange = (event) => {
     this.setState({
