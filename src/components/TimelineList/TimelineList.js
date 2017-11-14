@@ -4,8 +4,8 @@ import './TimelineList.css';
 
 export default ({ items }) => (
   <div className='List'>
-    {items.map((item, index) => <div key={index}>
-      <TimelineItem title={item.title} price={item.price} />
+    {items.map((item, index) => <div key={item.title}>
+      <TimelineItem title={item.title} price={item.price} type={item.type} />
     </div>)}
   </div>
 );
