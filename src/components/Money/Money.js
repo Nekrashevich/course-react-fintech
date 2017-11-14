@@ -2,7 +2,6 @@ import React from 'react';
 const dict = { USD: '$', EUR: '€', GBP: '£', RUB: '₽' };
 
 export default (props) => {
-
   let [left, right] = props.value.toString().split('.');
 
   return <span>
